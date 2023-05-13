@@ -8,6 +8,8 @@ import { signIn, signOut, useSession } from "next-auth/react"
 
 export default function Signinbutton() {
   const {data:session}=useSession()
+  console.log(session?.user);
+   
  if(session && session.user){
     return(
         <div>
